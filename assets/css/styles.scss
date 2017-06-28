@@ -19,6 +19,7 @@ body {
     font-family: 'Arvo', serif;
 }
 header {
+    background: white;
     height: 100px;
     box-shadow: 0 0 10px rgba(50, 50, 50, 0.3);
     padding: 28px;
@@ -32,15 +33,75 @@ header {
         font-size: 20px;
     }
 }
+
+.social {
+    float: right;
+    cursor: default;
+    list-style: none;
+    li {
+        display: inline-block;
+        margin: 2px;
+    }
+    a {
+        cursor: default;
+        border: none;
+    }
+    svg {
+        fill: black;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: solid 1px #222;
+        padding: 4px;
+        cursor: pointer;
+        -webkit-transition: .3s;
+        transition: .3s;
+    }
+    svg:hover {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+    li:first-child svg:hover {
+        border-color: #9b6954;
+        fill: #9b6954;
+    }
+    li:nth-child(2) svg:hover {
+        border-color: #FFFC00;
+        fill: #FFFC00;
+    }
+    li:nth-child(3) svg:hover {
+        border-color: #55acee;
+        fill: #55acee;
+    }
+    li:nth-child(4) svg:hover {
+        border-color: #3b5998;
+        fill: #3b5998;
+    }
+}
+
+
 .jumbotron {
     height: 70vh;
     width: 100%;
     padding-top: 10vh;
-    background-image: url(/assets/img/jumbo.jpg);
+    background-color: transparent;
     color: white;
     h1 {
         font-size: 40px;
     }
+}
+#bg {
+    position: fixed;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-image: url(/assets/img/jumbo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .play-button {
@@ -57,18 +118,41 @@ header {
 }
 
 section {
-    height: 70vh;
+    background: white;
+    min-height: 70vh;
     padding: 1in;
+    h5 {
+        font-size: 40px;
+    }
     &:nth-of-type(even) {
         text-align: right;
         box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);
     }
-    h5 {
-        font-size: 40px;
+    &:nth-of-type(2) {
+        background-image: url(/assets/img/above.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.team {
+    list-style-type: none;
+    .profile {
+        display: inline-block;
+        width: 3in;
+        margin: 10px;
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        h6 {
+            font-size: 30px;
+        }
     }
 }
 
 footer {
+    clear: both;
     height: 100px;
     text-align: center;
     padding-top: 40px;

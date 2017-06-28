@@ -1,5 +1,4 @@
-title: MSU Greenhouse
-email: your-email@domain.com
+title: The Biodome
 description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -9,3 +8,8 @@ markdown: kramdown
 exclude:
   - Gemfile
   - Gemfile.lock
+
+instagram: msustudentgreenhouse
+snapchat: msubiodome
+twitter: MSUsgp
+facebook: sgpmsu
